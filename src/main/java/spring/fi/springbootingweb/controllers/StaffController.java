@@ -19,7 +19,7 @@ public class StaffController {
     private StaffService staffService;
 
     @GetMapping
-    public String getAllRooms (Model model) {
+    public String getAllStaffMembers (Model model) {
         model.addAttribute("staff", staffService.returnAllStaff());
         return "staff";
     }
