@@ -1,7 +1,7 @@
 package spring.fi.springbootingweb.models;
 
 public enum Position {
-    MANAGER, HOUSEKEEPING, FRONT_DESK, EXECUTIVE;
+    MANAGER, HOUSEKEEPING, FRONT_DESK, EXECUTIVE, SECURITY, CONCIERGE;
 
     public String toString() {
         switch (this) {
@@ -13,6 +13,10 @@ public enum Position {
                 return "Executive";
             case MANAGER:
                 return "Manager";
+            case SECURITY:
+                return "Security";
+            case CONCIERGE:
+                return "Concierge";
         }
         return "";
     }

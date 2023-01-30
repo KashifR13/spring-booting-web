@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import spring.fi.springbootingweb.data.RoomRepository;
 import spring.fi.springbootingweb.models.Room;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
