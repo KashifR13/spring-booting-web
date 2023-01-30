@@ -10,8 +10,11 @@ import java.util.List;
 @Service
 public class RoomService {
 
-    @Autowired
-    private RoomRepository roomRepository;
+    private final RoomRepository roomRepository;
+
+    public RoomService(RoomRepository roomRepository) {
+        this.roomRepository = roomRepository;
+    }
 
     public List<Room> returnAllRooms () {
         return roomRepository.findAll();

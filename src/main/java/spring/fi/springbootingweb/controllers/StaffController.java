@@ -15,8 +15,11 @@ import java.util.List;
 @RequestMapping("/staff")
 public class StaffController {
 
-    @Autowired
-    private StaffService staffService;
+    private final StaffService staffService;
+
+    public StaffController(StaffService staffService) {
+        this.staffService = staffService;
+    }
 
     @GetMapping
     public String getAllStaffMembers (Model model) {

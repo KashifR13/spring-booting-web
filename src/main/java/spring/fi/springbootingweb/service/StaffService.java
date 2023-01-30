@@ -10,8 +10,11 @@ import java.util.List;
 @Service
 public class StaffService {
 
-    @Autowired
-    private StaffRepository staffRepository;
+    private final StaffRepository staffRepository;
+
+    public StaffService(StaffRepository staffRepository) {
+        this.staffRepository = staffRepository;
+    }
 
     public List<Staff> returnAllStaff () {
         return staffRepository.findAll();

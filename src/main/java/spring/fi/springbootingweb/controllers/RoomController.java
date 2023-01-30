@@ -11,8 +11,11 @@ import spring.fi.springbootingweb.service.RoomService;
 @RequestMapping("/rooms")
 public class RoomController {
 
-    @Autowired
-    private RoomService roomService;
+    private final RoomService roomService;
+
+    public RoomController(RoomService roomService) {
+        this.roomService = roomService;
+    }
 
     @GetMapping
     public String getAllRooms (Model model) {
